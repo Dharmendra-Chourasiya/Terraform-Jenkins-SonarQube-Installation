@@ -5,15 +5,10 @@
         git 'Default Git' // Use the name given in the Git configuration
     }
 
-    environment {
-        GIT_REPO_URL = 'https://github.com/Dharmendra-Chourasiya/Java-based-project.git'
-        GIT_CREDENTIALS_ID = 'github-cicd'
-    }
-
     stages {
         stage('Checkout') {
             steps {
-                git branch: 'main', url: "${https://github.com/Dharmendra-Chourasiya/Java-based-project.git}", credentialsId: "${gitgub-cicd}"
+                git branch: 'main', url: 'https://github.com/Dharmendra-Chourasiya/jenkin-cicd.git'
             }
         }
 
